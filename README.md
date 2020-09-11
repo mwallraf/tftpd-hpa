@@ -9,5 +9,5 @@ To know all options: https://manpages.debian.org/testing/tftpd-hpa/tftpd.8.en.ht
 Start container:
 
 ```
-docker run --detach -p 69:69/udp -v /opt/tftpboot:/tftpboot --name tftpd mwallraf/tftpd-hpa:latest
+docker run --detach -p 69:69/udp -v /opt/tftpboot:/tftpboot -v /var/log/tftpd.log:/var/log/tftpd.log--name tftpd mwallraf/tftpd-hpa:latest
 ```
