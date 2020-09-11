@@ -15,7 +15,7 @@ RUN echo -e "#!/bin/sh\nbusybox syslogd -n -O /var/log/tftpd.log" > /runit-servi
 RUN chmod +x /runit-services/syslogd/run /runit-services/tftpd-hpa/run && \
     rm -rf /tmp/* /var/tmp/*
 
-VOLUME /tftpboot, /var/log/tftpd.log
+VOLUME ["/tftpboot", "/var/log/tftpd.log"]
 
 EXPOSE 69/udp
 
